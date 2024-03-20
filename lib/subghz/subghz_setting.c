@@ -10,9 +10,45 @@
 #define FREQUENCY_FLAG_DEFAULT (1 << 31)
 #define FREQUENCY_MASK (0xFFFFFFFF ^ FREQUENCY_FLAG_DEFAULT)
 
-/* Default */
+/* Europe and Russia */
 static const uint32_t subghz_frequency_list[] = {
     /* 300 - 348 */
+    300000000,
+    303875000,
+    304250000,
+    310000000,
+    315000000,
+    318000000,
+
+    /* 387 - 464 */
+    390000000,
+    418000000,
+    433075000, /* LPD433 first */
+    433420000,
+    433920000 | FREQUENCY_FLAG_DEFAULT, /* LPD433 mid */
+    434420000,
+    434775000, /* LPD433 last channels */
+    438900000,
+
+    /* 779 - 928 */
+    868350000,
+    915000000,
+    925000000,
+    0,
+};
+static const uint32_t subghz_hopper_frequency_list[] = {
+    310000000,
+    315000000,
+    318000000,
+    390000000,
+    433920000,
+    868350000,
+    0,
+};
+
+/* Default */
+/*static const uint32_t subghz_frequency_list_default[] = {
+    // 300 - 348 
     300000000,
     302757000,
     303875000,
@@ -38,32 +74,32 @@ static const uint32_t subghz_frequency_list[] = {
     348000000,
     350000000,
 
-    /* 387 - 464 */
+    // 387 - 464 
     387000000,
     390000000,
     418000000,
     430000000,
     431000000,
     431500000,
-    433075000, /* LPD433 first */
+    433075000, // LPD433 first 
     433220000,
     433420000,
     433657070,
     433889000,
-    433920000 | FREQUENCY_FLAG_DEFAULT, /* LPD433 mid */
+    433920000 | FREQUENCY_FLAG_DEFAULT, // LPD433 mid 
     434075000,
     434176948,
     434190000,
     434390000,
     434420000,
     434620000,
-    434775000, /* LPD433 last channels */
+    434775000, // LPD433 last channels 
     438900000,
     440175000,
     464000000,
     467750000,
 
-    /* 779 - 928 */
+    // 779 - 928 
     779000000,
     868350000,
     868400000,
@@ -76,7 +112,7 @@ static const uint32_t subghz_frequency_list[] = {
     0,
 };
 
-static const uint32_t subghz_hopper_frequency_list[] = {
+static const uint32_t subghz_hopper_frequency_list_default[] = {
     310000000,
     315000000,
     318000000,
@@ -84,7 +120,7 @@ static const uint32_t subghz_hopper_frequency_list[] = {
     433920000,
     868350000,
     0,
-};
+};*/
 
 typedef struct {
     FuriString* custom_preset_name;
