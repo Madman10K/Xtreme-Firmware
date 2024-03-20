@@ -10,6 +10,12 @@
 
 This firmware is an extensive overhaul of the [Official Firmware](https://github.com/flipperdevices/flipperzero-firmware), and also features most of the awesome code-bits from [Unleashed](https://github.com/DarkFlippers/unleashed-firmware).
 
+----
+
+## Changes in this fork
+Changes:
+1. Added back region locks for Europe, because I don't want ДАНС to knock on my door for goofing around
+
 -----
 <br>
 <h2 align="center">What makes it special?</h2>
